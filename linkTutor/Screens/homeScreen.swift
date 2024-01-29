@@ -41,6 +41,9 @@ struct homeScreen: View{
 //                Spacer()
                 
             }
+            
+            
+            
             .padding(.top, 10)
             .background(Color.background)
             Spacer()
