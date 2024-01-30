@@ -5,7 +5,7 @@ struct sectionHeader: View{
     var body: some View{
         HStack{
             Text("\(sectionName)")
-                .font(AppFont.smallTitle)
+                .font(AppFont.mediumSemiBold)
             Spacer()
             Text("View more")
                 .font(AppFont.actionButton)

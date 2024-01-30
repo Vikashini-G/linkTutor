@@ -10,12 +10,22 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TabView {
+                homeScreen()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                searchScreen()
+                    .tabItem {
+                        Label("Home", systemImage: "magnifyingglass")
+                    }
+                listClassesScreen(skillType: "Piano Class")
+                    .tabItem {
+                        Label("sample classes", systemImage: "figure.track.and.field")
+                    }
+            }
+            
         }
-        .padding()
     }
 }
 

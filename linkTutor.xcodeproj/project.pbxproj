@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F28B0FF2B67FC0800E7E47F /* searchHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28B0FE2B67FC0800E7E47F /* searchHeader.swift */; };
+		0F28B1012B68089200E7E47F /* listClassesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28B1002B68089200E7E47F /* listClassesScreen.swift */; };
+		0F28B1042B680D3300E7E47F /* classPreviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28B1032B680D3300E7E47F /* classPreviewCard.swift */; };
 		0F5E93FE2B6549F000212922 /* linkTutorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E93FD2B6549F000212922 /* linkTutorApp.swift */; };
 		0F5E94002B6549F000212922 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E93FF2B6549F000212922 /* ContentView.swift */; };
 		0F5E94022B6549F200212922 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F5E94012B6549F200212922 /* Assets.xcassets */; };
@@ -22,6 +25,16 @@
 		0F5E94392B66568000212922 /* appFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E94382B66568000212922 /* appFonts.swift */; };
 		0F5E943B2B66591300212922 /* navBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E943A2B66591300212922 /* navBar.swift */; };
 		0F5E943D2B6667FB00212922 /* searchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5E943C2B6667FB00212922 /* searchScreen.swift */; };
+		0FAA9BE42B68B32900C0A82D /* classLandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */; };
+		0FAA9BE72B68B97600C0A82D /* quickInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BE62B68B97600C0A82D /* quickInfoCard.swift */; };
+		0FAA9BEC2B68CA9400C0A82D /* reviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BEB2B68CA9400C0A82D /* reviewCard.swift */; };
+		0FAA9BF22B68D32700C0A82D /* ProfileInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */; };
+		0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */; };
+		0FDA44752B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44742B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift */; };
+		0FDA44772B68D4F9006F1418 /* loginPageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */; };
+		0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */; };
+		0FDA447C2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */; };
+		0FDA447E2B68D651006F1418 /* signUpSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA447D2B68D651006F1418 /* signUpSwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F28B0FE2B67FC0800E7E47F /* searchHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchHeader.swift; sourceTree = "<group>"; };
+		0F28B1002B68089200E7E47F /* listClassesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listClassesScreen.swift; sourceTree = "<group>"; };
+		0F28B1032B680D3300E7E47F /* classPreviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classPreviewCard.swift; sourceTree = "<group>"; };
 		0F5E93FA2B6549F000212922 /* linkTutor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = linkTutor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F5E93FD2B6549F000212922 /* linkTutorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = linkTutorApp.swift; sourceTree = "<group>"; };
 		0F5E93FF2B6549F000212922 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +76,16 @@
 		0F5E94382B66568000212922 /* appFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appFonts.swift; sourceTree = "<group>"; };
 		0F5E943A2B66591300212922 /* navBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navBar.swift; sourceTree = "<group>"; };
 		0F5E943C2B6667FB00212922 /* searchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchScreen.swift; sourceTree = "<group>"; };
+		0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classLandingPage.swift; sourceTree = "<group>"; };
+		0FAA9BE62B68B97600C0A82D /* quickInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quickInfoCard.swift; sourceTree = "<group>"; };
+		0FAA9BEB2B68CA9400C0A82D /* reviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reviewCard.swift; sourceTree = "<group>"; };
+		0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInputView.swift; sourceTree = "<group>"; };
+		0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingFormView.swift; sourceTree = "<group>"; };
+		0FDA44742B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingPageSwiftUIView.swift; sourceTree = "<group>"; };
+		0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPageSwiftUIView.swift; sourceTree = "<group>"; };
+		0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTimetablePageSwiftUIView.swift; sourceTree = "<group>"; };
+		0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCardSwiftUIView.swift; sourceTree = "<group>"; };
+		0FDA447D2B68D651006F1418 /* signUpSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpSwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F28B0FD2B67FBE500E7E47F /* search */ = {
+			isa = PBXGroup;
+			children = (
+				0F28B0FE2B67FC0800E7E47F /* searchHeader.swift */,
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		0F28B1022B680D1000E7E47F /* llistClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0F28B1032B680D3300E7E47F /* classPreviewCard.swift */,
+			);
+			path = llistClasses;
+			sourceTree = "<group>";
+		};
 		0F5E93F12B6549F000212922 = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +154,9 @@
 			children = (
 				0F5E94382B66568000212922 /* appFonts.swift */,
 				0F5E93FD2B6549F000212922 /* linkTutorApp.swift */,
+				0F5E93FF2B6549F000212922 /* ContentView.swift */,
 				0F5E942C2B654B4500212922 /* Screens */,
 				0F5E942B2B654ACD00212922 /* Components */,
-				0F5E93FF2B6549F000212922 /* ContentView.swift */,
 				0F5E94012B6549F200212922 /* Assets.xcassets */,
 				0F5E94032B6549F200212922 /* Preview Content */,
 			);
@@ -149,6 +191,10 @@
 		0F5E942B2B654ACD00212922 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0FDA447A2B68D5D6006F1418 /* timeTable */,
+				0FAA9BE52B68B94D00C0A82D /* classLanding */,
+				0F28B1022B680D1000E7E47F /* llistClasses */,
+				0F28B0FD2B67FBE500E7E47F /* search */,
 				0F5E94312B6579F300212922 /* home */,
 			);
 			path = Components;
@@ -159,6 +205,14 @@
 			children = (
 				0F5E942D2B654B6A00212922 /* homeScreen.swift */,
 				0F5E943C2B6667FB00212922 /* searchScreen.swift */,
+				0F28B1002B68089200E7E47F /* listClassesScreen.swift */,
+				0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */,
+				0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */,
+				0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */,
+				0FDA44742B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift */,
+				0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */,
+				0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */,
+				0FDA447D2B68D651006F1418 /* signUpSwiftUIView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -173,6 +227,23 @@
 				0F5E943A2B66591300212922 /* navBar.swift */,
 			);
 			path = home;
+			sourceTree = "<group>";
+		};
+		0FAA9BE52B68B94D00C0A82D /* classLanding */ = {
+			isa = PBXGroup;
+			children = (
+				0FAA9BE62B68B97600C0A82D /* quickInfoCard.swift */,
+				0FAA9BEB2B68CA9400C0A82D /* reviewCard.swift */,
+			);
+			path = classLanding;
+			sourceTree = "<group>";
+		};
+		0FDA447A2B68D5D6006F1418 /* timeTable */ = {
+			isa = PBXGroup;
+			children = (
+				0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */,
+			);
+			path = timeTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,16 +376,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F28B1012B68089200E7E47F /* listClassesScreen.swift in Sources */,
 				0F5E94302B654C2E00212922 /* header.swift in Sources */,
+				0F28B1042B680D3300E7E47F /* classPreviewCard.swift in Sources */,
+				0FAA9BF22B68D32700C0A82D /* ProfileInputView.swift in Sources */,
+				0FDA447E2B68D651006F1418 /* signUpSwiftUIView.swift in Sources */,
+				0FDA447C2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift in Sources */,
+				0F28B0FF2B67FC0800E7E47F /* searchHeader.swift in Sources */,
 				0F5E943D2B6667FB00212922 /* searchScreen.swift in Sources */,
+				0FAA9BE42B68B32900C0A82D /* classLandingPage.swift in Sources */,
 				0F5E942E2B654B6A00212922 /* homeScreen.swift in Sources */,
+				0FDA44752B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift in Sources */,
+				0FAA9BEC2B68CA9400C0A82D /* reviewCard.swift in Sources */,
+				0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */,
 				0F5E94002B6549F000212922 /* ContentView.swift in Sources */,
 				0F5E93FE2B6549F000212922 /* linkTutorApp.swift in Sources */,
 				0F5E94392B66568000212922 /* appFonts.swift in Sources */,
+				0FDA44772B68D4F9006F1418 /* loginPageSwiftUIView.swift in Sources */,
+				0FAA9BE72B68B97600C0A82D /* quickInfoCard.swift in Sources */,
 				0F5E94352B66369900212922 /* sectionHeader.swift in Sources */,
 				0F5E94372B66393E00212922 /* popularClassCard.swift in Sources */,
 				0F5E943B2B66591300212922 /* navBar.swift in Sources */,
 				0F5E94332B657A3400212922 /* enrolledClassCard.swift in Sources */,
+				0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

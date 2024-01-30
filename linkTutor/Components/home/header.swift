@@ -6,7 +6,9 @@ struct header: View{
         HStack{
             VStack(alignment: .leading){
                 HStack{
-                    Text("Hi Emma!").font(.system(size: 36).weight(.bold)).fontDesign(.rounded).foregroundColor(.black).padding(.bottom, 1)
+                    Text("Hi Emma!")
+                        .font(AppFont.largeBold)
+                        .padding(.bottom, 1)
                     Spacer()
                     Image(systemName: "person.circle.fill")
                         .resizable()
@@ -14,7 +16,7 @@ struct header: View{
                         .frame(width: 50, height: 50)
                 }
                 Text("what are you looking for today?")
-                    .font(.system(size: 20)).fontDesign(.rounded).foregroundColor(.black)
+                    .font(AppFont.mediumReg)
             }
             Spacer()
 

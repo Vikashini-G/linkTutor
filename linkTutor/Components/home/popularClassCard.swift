@@ -19,11 +19,11 @@ struct popularClassCard: View{
         VStack {
         //class
             Text("\(className)")
-                .font(AppFont.smallTitle)
+                .font(AppFont.mediumSemiBold)
             
         //tutor
             Text("by \(tutorName)")
-                .font(AppFont.subTitle)
+                .font(AppFont.smallReg)
                 
         //icon
             Image("\(iconName)")
