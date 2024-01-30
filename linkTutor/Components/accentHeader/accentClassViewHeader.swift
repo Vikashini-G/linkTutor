@@ -9,7 +9,16 @@ import SwiftUI
 
 struct accentClassViewHeader: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Rectangle()
+                .frame(maxWidth: .infinity, maxHeight: 200)
+                .foregroundColor(Color.accent)
+            RoundedRectangle(cornerRadius: 50)
+                .frame(maxWidth: .infinity, maxHeight: 300)
+                .foregroundColor(Color.accent)
+                .cornerRadius(50)
+                .offset(y: 100)
+        }
     }
 }
 
