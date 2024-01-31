@@ -38,6 +38,10 @@
 		0FDA44862B68FDC2006F1418 /* accentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44852B68FDC2006F1418 /* accentHeader.swift */; };
 		0FDA44892B6903CC006F1418 /* accentClassViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA44882B6903CC006F1418 /* accentClassViewHeader.swift */; };
 		0FDA448B2B6911A3006F1418 /* classLandingScrollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDA448A2B6911A3006F1418 /* classLandingScrollable.swift */; };
+		B1A9E3AE2B6A946600324817 /* enrolledClassList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3AD2B6A946600324817 /* enrolledClassList.swift */; };
+		B1A9E3B02B6A947F00324817 /* enrolledClassDataM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3AF2B6A947F00324817 /* enrolledClassDataM.swift */; };
+		B1A9E3B42B6AA87600324817 /* myProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3B32B6AA87600324817 /* myProfileView.swift */; };
+		B1A9E3B72B6AB00900324817 /* profileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3B62B6AB00900324817 /* profileCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +96,10 @@
 		0FDA44852B68FDC2006F1418 /* accentHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accentHeader.swift; sourceTree = "<group>"; };
 		0FDA44882B6903CC006F1418 /* accentClassViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accentClassViewHeader.swift; sourceTree = "<group>"; };
 		0FDA448A2B6911A3006F1418 /* classLandingScrollable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classLandingScrollable.swift; sourceTree = "<group>"; };
+		B1A9E3AD2B6A946600324817 /* enrolledClassList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enrolledClassList.swift; sourceTree = "<group>"; };
+		B1A9E3AF2B6A947F00324817 /* enrolledClassDataM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enrolledClassDataM.swift; sourceTree = "<group>"; };
+		B1A9E3B32B6AA87600324817 /* myProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileView.swift; sourceTree = "<group>"; };
+		B1A9E3B62B6AB00900324817 /* profileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,7 @@
 		0F5E942B2B654ACD00212922 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9E3B52B6AAFC300324817 /* profile */,
 				0FDA44872B6903A5006F1418 /* accentHeader */,
 				0FDA447A2B68D5D6006F1418 /* timeTable */,
 				0FAA9BE52B68B94D00C0A82D /* classLanding */,
@@ -220,6 +229,7 @@
 				0FDA44762B68D4F9006F1418 /* loginPageSwiftUIView.swift */,
 				0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */,
 				0FDA447D2B68D651006F1418 /* signUpSwiftUIView.swift */,
+				B1A9E3B32B6AA87600324817 /* myProfileView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -227,8 +237,8 @@
 		0F5E94312B6579F300212922 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9E3AC2B6A927300324817 /* enrolledClasses */,
 				0F5E942F2B654C2E00212922 /* header.swift */,
-				0F5E94322B657A3400212922 /* enrolledClassCard.swift */,
 				0F5E94342B66369900212922 /* sectionHeader.swift */,
 				0F5E94362B66393E00212922 /* popularClassCard.swift */,
 				0F5E943A2B66591300212922 /* navBar.swift */,
@@ -261,6 +271,24 @@
 				0FDA44882B6903CC006F1418 /* accentClassViewHeader.swift */,
 			);
 			path = accentHeader;
+			sourceTree = "<group>";
+		};
+		B1A9E3AC2B6A927300324817 /* enrolledClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9E3AF2B6A947F00324817 /* enrolledClassDataM.swift */,
+				0F5E94322B657A3400212922 /* enrolledClassCard.swift */,
+				B1A9E3AD2B6A946600324817 /* enrolledClassList.swift */,
+			);
+			path = enrolledClasses;
+			sourceTree = "<group>";
+		};
+		B1A9E3B52B6AAFC300324817 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9E3B62B6AB00900324817 /* profileCard.swift */,
+			);
+			path = profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +426,7 @@
 				0F28B1042B680D3300E7E47F /* classPreviewCard.swift in Sources */,
 				0FAA9BF22B68D32700C0A82D /* ProfileInputView.swift in Sources */,
 				0FDA447E2B68D651006F1418 /* signUpSwiftUIView.swift in Sources */,
+				B1A9E3B02B6A947F00324817 /* enrolledClassDataM.swift in Sources */,
 				0FDA447C2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift in Sources */,
 				0FDA44892B6903CC006F1418 /* accentClassViewHeader.swift in Sources */,
 				0F28B0FF2B67FC0800E7E47F /* searchHeader.swift in Sources */,
@@ -405,7 +434,9 @@
 				0FAA9BE42B68B32900C0A82D /* classLandingPage.swift in Sources */,
 				0F5E942E2B654B6A00212922 /* homeScreen.swift in Sources */,
 				0FDA44752B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift in Sources */,
+				B1A9E3B42B6AA87600324817 /* myProfileView.swift in Sources */,
 				0FAA9BEC2B68CA9400C0A82D /* reviewCard.swift in Sources */,
+				B1A9E3B72B6AB00900324817 /* profileCard.swift in Sources */,
 				0FDA44862B68FDC2006F1418 /* accentHeader.swift in Sources */,
 				0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */,
 				0F5E94002B6549F000212922 /* ContentView.swift in Sources */,
@@ -417,6 +448,7 @@
 				0F5E94352B66369900212922 /* sectionHeader.swift in Sources */,
 				0F5E94372B66393E00212922 /* popularClassCard.swift in Sources */,
 				0F5E943B2B66591300212922 /* navBar.swift in Sources */,
+				B1A9E3AE2B6A946600324817 /* enrolledClassList.swift in Sources */,
 				0F5E94332B657A3400212922 /* enrolledClassCard.swift in Sources */,
 				0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */,
 			);

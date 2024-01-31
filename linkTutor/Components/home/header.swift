@@ -10,10 +10,14 @@ struct header: View{
                         .font(AppFont.largeBold)
                         .padding(.bottom, 1)
                     Spacer()
-                    Image(systemName: "person.circle.fill")
-                        .resizable()
-                        .clipped()
-                        .frame(width: 50, height: 50)
+                    //myProfileView
+                    NavigationLink(destination: myProfileView()){
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .clipped()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.black)
+                    }
                 }
                 Text("what are you looking for today?")
                     .font(AppFont.mediumReg)

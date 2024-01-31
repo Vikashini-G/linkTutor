@@ -19,14 +19,8 @@ struct homeScreen: View{
                     .padding(.horizontal)
                 
                 //enrolled classes cards
-                ScrollView(.horizontal, showsIndicators: false){
-                    HStack(spacing: 10) {
-                        enrolledClassCard(className: "Piano Class", tutorName: "Mr. Joe", daysConducted: "Mondays & Tuesdays", timing: "4-5pm")
-                        enrolledClassCard(className: "Piano Class", tutorName: "Mr. Joe", daysConducted: "Mondays & Tuesdays", timing: "4-5pm")
-                    }
-                }
-                .padding(.leading)
-                .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
+                enrolledClassList()
+                
                 
                 //Popular classes section
                 sectionHeader(sectionName: "Popular classes in your city!")
