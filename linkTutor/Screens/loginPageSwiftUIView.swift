@@ -10,14 +10,11 @@ struct LoginView: View {
     
     var body: some View {
         ZStack{
-            Color(.background)
-                .edgesIgnoringSafeArea(.all)
-                
             VStack {
                 ZStack{
-                    RoundedRectangle(cornerRadius: 30, style: .continuous)
-                        .fill(Color.accent) // Use the color you want for the rounded rectangle
-                        .frame(height:300) // Set the height you want for the rounded rectangle
+//                    RoundedRectangle(cornerRadius: 30, style: .continuous)
+//                        .fill(Color.accent) // Use the color you want for the rounded rectangle
+//                        .frame(height:300) // Set the height you want for the rounded rectangle
                     
                     VStack(alignment: .center){
                         
@@ -66,11 +63,10 @@ struct LoginView: View {
                             }
                         }
                         .padding([.leading, .trailing], 70)
-                        .padding(.top,50)
+                        .padding(.top,80)
                         
                     }
                 }
-                .edgesIgnoringSafeArea(.top)
                 
                 TextField("Username", text: $username)
                     .padding()
@@ -115,6 +111,15 @@ struct LoginView: View {
                 
                 Spacer()
             }
+            .background(
+                VStack{
+                    accentClassViewHeader()
+                        .edgesIgnoringSafeArea(.top)
+                        .offset(y: -150)
+                    Spacer()
+                }
+            )
+            .background(Color.background)
             .navigationTitle("Login")
         }
     }

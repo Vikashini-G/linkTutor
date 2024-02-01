@@ -42,6 +42,10 @@
 		B1A9E3B02B6A947F00324817 /* enrolledClassDataM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3AF2B6A947F00324817 /* enrolledClassDataM.swift */; };
 		B1A9E3B42B6AA87600324817 /* myProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3B32B6AA87600324817 /* myProfileView.swift */; };
 		B1A9E3B72B6AB00900324817 /* profileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3B62B6AB00900324817 /* profileCard.swift */; };
+		B1A9E3B92B6BD59100324817 /* onboardingPageSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3B82B6BD59100324817 /* onboardingPageSwiftUIView.swift */; };
+		B1A9E3BB2B6BE8A200324817 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BA2B6BE8A100324817 /* loginView.swift */; };
+		B1A9E3BE2B6BF0F600324817 /* accentLongHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BD2B6BF0F600324817 /* accentLongHeader.swift */; };
+		B1A9E3C02B6C097500324817 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BF2B6C097500324817 /* signUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +104,10 @@
 		B1A9E3AF2B6A947F00324817 /* enrolledClassDataM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enrolledClassDataM.swift; sourceTree = "<group>"; };
 		B1A9E3B32B6AA87600324817 /* myProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myProfileView.swift; sourceTree = "<group>"; };
 		B1A9E3B62B6AB00900324817 /* profileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileCard.swift; sourceTree = "<group>"; };
+		B1A9E3B82B6BD59100324817 /* onboardingPageSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingPageSwiftUIView.swift; sourceTree = "<group>"; };
+		B1A9E3BA2B6BE8A100324817 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
+		B1A9E3BD2B6BF0F600324817 /* accentLongHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accentLongHeader.swift; sourceTree = "<group>"; };
+		B1A9E3BF2B6C097500324817 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +227,8 @@
 		0F5E942C2B654B4500212922 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9E3BC2B6BEFE900324817 /* LoginSignUp */,
+				B1A9E3B82B6BD59100324817 /* onboardingPageSwiftUIView.swift */,
 				0F5E942D2B654B6A00212922 /* homeScreen.swift */,
 				0F5E943C2B6667FB00212922 /* searchScreen.swift */,
 				0F28B1002B68089200E7E47F /* listClassesScreen.swift */,
@@ -269,6 +279,7 @@
 			children = (
 				0FDA44852B68FDC2006F1418 /* accentHeader.swift */,
 				0FDA44882B6903CC006F1418 /* accentClassViewHeader.swift */,
+				B1A9E3BD2B6BF0F600324817 /* accentLongHeader.swift */,
 			);
 			path = accentHeader;
 			sourceTree = "<group>";
@@ -289,6 +300,15 @@
 				B1A9E3B62B6AB00900324817 /* profileCard.swift */,
 			);
 			path = profile;
+			sourceTree = "<group>";
+		};
+		B1A9E3BC2B6BEFE900324817 /* LoginSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9E3BA2B6BE8A100324817 /* loginView.swift */,
+				B1A9E3BF2B6C097500324817 /* signUpView.swift */,
+			);
+			path = LoginSignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A9E3B92B6BD59100324817 /* onboardingPageSwiftUIView.swift in Sources */,
 				0F28B1012B68089200E7E47F /* listClassesScreen.swift in Sources */,
 				0F5E94302B654C2E00212922 /* header.swift in Sources */,
 				0F28B1042B680D3300E7E47F /* classPreviewCard.swift in Sources */,
@@ -436,6 +457,7 @@
 				0FDA44752B68D4CC006F1418 /* LaunchingPageSwiftUIView.swift in Sources */,
 				B1A9E3B42B6AA87600324817 /* myProfileView.swift in Sources */,
 				0FAA9BEC2B68CA9400C0A82D /* reviewCard.swift in Sources */,
+				B1A9E3C02B6C097500324817 /* signUpView.swift in Sources */,
 				B1A9E3B72B6AB00900324817 /* profileCard.swift in Sources */,
 				0FDA44862B68FDC2006F1418 /* accentHeader.swift in Sources */,
 				0FDA44792B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift in Sources */,
@@ -446,9 +468,11 @@
 				0FDA44772B68D4F9006F1418 /* loginPageSwiftUIView.swift in Sources */,
 				0FAA9BE72B68B97600C0A82D /* quickInfoCard.swift in Sources */,
 				0F5E94352B66369900212922 /* sectionHeader.swift in Sources */,
+				B1A9E3BB2B6BE8A200324817 /* loginView.swift in Sources */,
 				0F5E94372B66393E00212922 /* popularClassCard.swift in Sources */,
 				0F5E943B2B66591300212922 /* navBar.swift in Sources */,
 				B1A9E3AE2B6A946600324817 /* enrolledClassList.swift in Sources */,
+				B1A9E3BE2B6BF0F600324817 /* accentLongHeader.swift in Sources */,
 				0F5E94332B657A3400212922 /* enrolledClassCard.swift in Sources */,
 				0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */,
 			);
@@ -621,6 +645,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -649,6 +674,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -198,6 +198,14 @@ struct classLandingPage: View{
                 }
                 }
             .padding([.top, .leading, .trailing])
+            .background(
+                VStack{
+                    accentClassViewHeader()
+                        .edgesIgnoringSafeArea(.top)
+                        .offset(y: -150)
+                    Spacer()
+                }
+            )
             .background(Color.background)
             VStack{
                 HStack{

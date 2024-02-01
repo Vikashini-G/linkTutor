@@ -11,7 +11,8 @@ import SwiftUI
 struct linkTutorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            onboardingPageSwiftUIView()
         }
     }
 }
+

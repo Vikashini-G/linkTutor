@@ -14,11 +14,11 @@ struct listClassesScreen: View{
     
     var body: some View{
         ZStack{
-            VStack{
-                accentHeader()
-                Spacer()
-            }
-            .edgesIgnoringSafeArea(.top)
+//            VStack{
+//                accentHeader()
+//                Spacer()
+//            }
+//            .edgesIgnoringSafeArea(.top)
             VStack(alignment: .leading){
                 HStack{
                     Text("\(skillType)")
@@ -66,7 +66,7 @@ struct listClassesScreen: View{
                 Text("Relavent results")
                     .font(AppFont.smallReg)
                     .padding(.leading, 10)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.myGray)
                 
                 ScrollView(.vertical, showsIndicators: false){
                     VStack(spacing: 10){
@@ -83,6 +83,14 @@ struct listClassesScreen: View{
             .padding([.top, .trailing, .leading])
             
         }
+        .background(
+            VStack{
+                accentClassViewHeader()
+                    .edgesIgnoringSafeArea(.top)
+                    .offset(y: -150)
+                Spacer()
+            }
+        )
         .background(Color.background)
     }
 }

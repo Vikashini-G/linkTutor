@@ -18,6 +18,7 @@ struct myProfileView: View {
             }
             
             profileCard(personName: "Fakie Nameiae", personEmail: "fake_email@gmail.com")
+                .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
                 .frame(maxWidth: .infinity, alignment: .center)
                 .padding(.top)
             
@@ -27,16 +28,19 @@ struct myProfileView: View {
                     Spacer()
                     Image(systemName: "arrow.right")
                 }
+                .listRowBackground(Color.background)
                 HStack{
                     Text("Delete my account")
                     Spacer()
                     Image(systemName: "arrow.right")
                 }
+                .listRowBackground(Color.background)
                 HStack{
                     Text("Notifications")
                     Spacer()
                     Image(systemName: "arrow.right")
                 }
+                .listRowBackground(Color.background)
             }
             .listStyle(PlainListStyle())
             .padding(.top)
@@ -50,11 +54,13 @@ struct myProfileView: View {
                     .background(Color.accent)
                     .cornerRadius(15)
             }
+            .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
             .frame(maxWidth: .infinity, alignment: .center)
             
             Spacer()
         }
         .padding()
+        .background(Color.background)
     }
 }
 

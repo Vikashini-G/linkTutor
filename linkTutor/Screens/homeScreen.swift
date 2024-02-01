@@ -3,13 +3,11 @@ import SwiftUI
 struct homeScreen: View{
     var body: some View{
         ZStack{
-            VStack{
-                accentClassViewHeader()
-                Spacer()
-            }
-            .offset(y: -120)
-            .edgesIgnoringSafeArea(.top)
-            
+//            VStack{
+//                accentClassViewHeader()
+//                Spacer()
+//            }
+            //.offset(y: -120)
             VStack{
                 header(yourName: "Emma")
                     .padding(.horizontal)
@@ -41,8 +39,17 @@ struct homeScreen: View{
                 
             }
             
-        }.padding(.top, 10)
-            .background(Color.background)
+        }
+        .padding(.top, 10)
+        .background(
+            VStack{
+                accentClassViewHeader()
+                    .edgesIgnoringSafeArea(.top)
+                    .offset(y: -150)
+                Spacer()
+            }
+        )
+        .background(Color.background)
     }
 }
 
