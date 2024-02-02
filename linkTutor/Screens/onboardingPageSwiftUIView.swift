@@ -51,7 +51,7 @@ struct tabBarView: View {
                     Spacer()
                     if currentPage != 2 {
                         HStack(alignment: .bottom) {
-                            NavigationLink(destination: homeScreen()) {
+                            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
                                 Text("Skip")
                                     .padding()
                                     .background(Color.littleDarkAccent)
@@ -75,7 +75,7 @@ struct tabBarView: View {
                     } else {
                         HStack(alignment: .bottom) {
                             Spacer()
-                            NavigationLink(destination: homeScreen() ){
+                            NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true) ){
                                 Text("Continue")
                                     .padding()
                                     .background(Color.littleDarkAccent)
