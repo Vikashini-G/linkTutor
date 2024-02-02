@@ -47,6 +47,8 @@
 		B1A9E3C02B6C097500324817 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BF2B6C097500324817 /* signUpView.swift */; };
 		B1A9E3C32B6C9AEE00324817 /* classMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C22B6C9AEE00324817 /* classMockData.swift */; };
 		B1A9E3C52B6CA32300324817 /* gradient header.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C42B6CA32300324817 /* gradient header.swift */; };
+		B1A9E3C92B6CB3FD00324817 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C82B6CB3FD00324817 /* Notifications.swift */; };
+		B1A9E3CB2B6CB5AA00324817 /* timetablesample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		B1A9E3BF2B6C097500324817 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
 		B1A9E3C22B6C9AEE00324817 /* classMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classMockData.swift; sourceTree = "<group>"; };
 		B1A9E3C42B6CA32300324817 /* gradient header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gradient header.swift"; sourceTree = "<group>"; };
+		B1A9E3C82B6CB3FD00324817 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetablesample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 		0F5E942B2B654ACD00212922 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9E3C72B6CB3EE00324817 /* Handlers */,
 				B1A9E3C12B6C9AD800324817 /* MockData */,
 				0FDA44872B6903A5006F1418 /* accentHeader */,
 				0FAA9BE52B68B94D00C0A82D /* classLanding */,
@@ -272,6 +277,7 @@
 			isa = PBXGroup;
 			children = (
 				0FDA447B2B68D5EC006F1418 /* TimeTableCardSwiftUIView.swift */,
+				B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */,
 			);
 			path = timeTable;
 			sourceTree = "<group>";
@@ -320,6 +326,14 @@
 				B1A9E3C22B6C9AEE00324817 /* classMockData.swift */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		B1A9E3C72B6CB3EE00324817 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9E3C82B6CB3FD00324817 /* Notifications.swift */,
+			);
+			path = Handlers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +478,7 @@
 				0FDA44892B6903CC006F1418 /* accentClassViewHeader.swift in Sources */,
 				0F28B0FF2B67FC0800E7E47F /* searchHeader.swift in Sources */,
 				0F5E943D2B6667FB00212922 /* searchScreen.swift in Sources */,
+				B1A9E3C92B6CB3FD00324817 /* Notifications.swift in Sources */,
 				0FAA9BE42B68B32900C0A82D /* classLandingPage.swift in Sources */,
 				0F5E942E2B654B6A00212922 /* homeScreen.swift in Sources */,
 				B1A9E3B42B6AA87600324817 /* myProfileView.swift in Sources */,
@@ -484,6 +499,7 @@
 				0F5E94372B66393E00212922 /* popularClassCard.swift in Sources */,
 				0F5E943B2B66591300212922 /* navBar.swift in Sources */,
 				B1A9E3AE2B6A946600324817 /* enrolledClassList.swift in Sources */,
+				B1A9E3CB2B6CB5AA00324817 /* timetablesample.swift in Sources */,
 				B1A9E3BE2B6BF0F600324817 /* accentLongHeader.swift in Sources */,
 				0F5E94332B657A3400212922 /* enrolledClassCard.swift in Sources */,
 				0FAA9BF42B68D34B00C0A82D /* RatingFormView.swift in Sources */,
