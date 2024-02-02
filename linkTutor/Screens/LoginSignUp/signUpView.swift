@@ -42,7 +42,7 @@ struct signUpView: View {
                             NavigationLink(destination: loginView()){
                                 Text("Login")
                                     .font(AppFont.mediumSemiBold)
-                                    .foregroundStyle(.black)
+                                    .foregroundStyle(.white)
                             }
                             Rectangle()
                                 .frame(width: 100, height: 3)
@@ -109,6 +109,20 @@ struct signUpView: View {
                     .padding(.top, 20)
                     .offset(y: 100)
                     .listStyle(PlainListStyle())
+                    
+                    //button
+                    Button(action: {}) {
+                        Text("Sign up")
+                            .font(AppFont.mediumSemiBold)
+                            .foregroundColor(.black)
+                            .padding(10)
+                            .padding(.horizontal, 50)
+                            .padding(.vertical, 10)
+                    }
+                    .background(Color.accent)
+                    .cornerRadius(50)
+                    .padding([.top,.bottom], 10)
+                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }

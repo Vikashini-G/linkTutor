@@ -1,39 +1,35 @@
 import SwiftUI
 
 struct classPreviewCard: View{
-    var className: String
-    var tutorName: String
-    var tutorRating: Double
-    var reviewCount: Int
-    var tutorAddress: String
-    var tutorPhone: String
+    var classData : classMockData
+  
     var body: some View{
         VStack(alignment: .leading){
             HStack{
                 //Image(systemName: "person.crop.square")
-                Image("teacherStockImage")
+                Image(classData.tutorImage)
                                 .resizable()
                                 .clipped()
                                 .frame(width: 85, height: 85)
                                 .cornerRadius(50)
                                 .padding(.trailing ,5)
                 VStack(alignment: .leading){
-                    Text("\(className)")
+                    Text("\(classData.className)")
                         .font(AppFont.mediumSemiBold)
                     
-                    Text("by \(tutorName)")
+                    Text("by \(classData.tutorName)")
                         .font(AppFont.smallReg)
                     
                     //4.5 stars and 40 reviews
                     HStack{
-                        Text("\(tutorRating, specifier: "%.1f") ⭐️")
+                        Text("\(classData.tutorRating, specifier: "%.1f") ⭐️")
                             .font(AppFont.smallReg)
                             .padding([.top, .bottom], 4)
                             .padding([.leading, .trailing], 8)
                             .background(.white)
                             .cornerRadius(50)
                             .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
-                        Text("\(reviewCount) reviews")
+                        Text("\(classData.reviewCount) reviews")
                             .font(AppFont.smallReg)
                             .padding(.leading, 5)
                             .foregroundColor(.gray)
@@ -49,16 +45,16 @@ struct classPreviewCard: View{
             HStack{
                 Image(systemName: "location")
                     .font(.system(size: 20))
-                Text("\(tutorAddress)")
+                Text("\(classData.tutorAddress)")
             }
             .padding([.top, .bottom], 1)
             
             //phone and message option
 //            HStack{
-//                
+//
 //                .background(Color.phoneAccent)
-//                
-//                
+//
+//
 //                HStack{
 //                    Image(systemName: "message.fill")
 //                        .font(.system(size: 17))
@@ -74,11 +70,17 @@ struct classPreviewCard: View{
 //                .cornerRadius(50)
 //                .background(Color.messageAccent)
 //            }
+            
             HStack{
+                
                 Image(systemName: "phone.fill")
                     .font(.system(size: 17))
-                Text("\(tutorPhone)")
+                Text("\(classData.tutorPhone)")
                     .font(AppFont.actionButton)
+                
+              
+                
+            
             }
             .padding([.top, .bottom], 4)
             .padding([.leading, .trailing], 12)
@@ -86,6 +88,9 @@ struct classPreviewCard: View{
             .cornerRadius(50)
             
             //Spacer()
+            
+            
+            
         }
         .frame(maxWidth: .infinity, maxHeight: 170)
         .padding()
@@ -95,5 +100,5 @@ struct classPreviewCard: View{
 }
 
 #Preview {
-    classPreviewCard(className: "The piano academy", tutorName:"John Doe", tutorRating: 4.5, reviewCount: 40, tutorAddress: "Fake street name, New York", tutorPhone: "1234567890")
+    classPreviewCard(classData: classesMockData.sampleClassData)
 }

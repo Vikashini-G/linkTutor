@@ -46,6 +46,7 @@
 		B1A9E3BB2B6BE8A200324817 /* loginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BA2B6BE8A100324817 /* loginView.swift */; };
 		B1A9E3BE2B6BF0F600324817 /* accentLongHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BD2B6BF0F600324817 /* accentLongHeader.swift */; };
 		B1A9E3C02B6C097500324817 /* signUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3BF2B6C097500324817 /* signUpView.swift */; };
+		B1A9E3C32B6C9AEE00324817 /* classMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C22B6C9AEE00324817 /* classMockData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		B1A9E3BA2B6BE8A100324817 /* loginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginView.swift; sourceTree = "<group>"; };
 		B1A9E3BD2B6BF0F600324817 /* accentLongHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accentLongHeader.swift; sourceTree = "<group>"; };
 		B1A9E3BF2B6C097500324817 /* signUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpView.swift; sourceTree = "<group>"; };
+		B1A9E3C22B6C9AEE00324817 /* classMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classMockData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,13 +215,14 @@
 		0F5E942B2B654ACD00212922 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				B1A9E3B52B6AAFC300324817 /* profile */,
+				B1A9E3C12B6C9AD800324817 /* MockData */,
 				0FDA44872B6903A5006F1418 /* accentHeader */,
-				0FDA447A2B68D5D6006F1418 /* timeTable */,
 				0FAA9BE52B68B94D00C0A82D /* classLanding */,
-				0F28B1022B680D1000E7E47F /* llistClasses */,
-				0F28B0FD2B67FBE500E7E47F /* search */,
 				0F5E94312B6579F300212922 /* home */,
+				0F28B1022B680D1000E7E47F /* llistClasses */,
+				B1A9E3B52B6AAFC300324817 /* profile */,
+				0F28B0FD2B67FBE500E7E47F /* search */,
+				0FDA447A2B68D5D6006F1418 /* timeTable */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,6 +312,14 @@
 				B1A9E3BF2B6C097500324817 /* signUpView.swift */,
 			);
 			path = LoginSignUp;
+			sourceTree = "<group>";
+		};
+		B1A9E3C12B6C9AD800324817 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				B1A9E3C22B6C9AEE00324817 /* classMockData.swift */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,6 +476,7 @@
 				0F5E93FE2B6549F000212922 /* linkTutorApp.swift in Sources */,
 				0FDA448B2B6911A3006F1418 /* classLandingScrollable.swift in Sources */,
 				0F5E94392B66568000212922 /* appFonts.swift in Sources */,
+				B1A9E3C32B6C9AEE00324817 /* classMockData.swift in Sources */,
 				0FDA44772B68D4F9006F1418 /* loginPageSwiftUIView.swift in Sources */,
 				0FAA9BE72B68B97600C0A82D /* quickInfoCard.swift in Sources */,
 				0F5E94352B66369900212922 /* sectionHeader.swift in Sources */,

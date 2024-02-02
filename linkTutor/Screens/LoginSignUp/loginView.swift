@@ -11,7 +11,7 @@ struct loginView: View {
     @State private var emailAdd = ""
     @State private var password = ""
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ZStack{
                 VStack{
                     accentLongheader()
@@ -93,6 +93,20 @@ struct loginView: View {
                     .padding(.top, 20)
                     .offset(y: 150)
                     .listStyle(PlainListStyle())
+                    
+                    //button
+                    Button(action: {}) {
+                        Text("Login")
+                            .font(AppFont.mediumSemiBold)
+                            .foregroundColor(.black)
+                            .padding(10)
+                            .padding(.horizontal, 50)
+                            .padding(.vertical, 10)
+                    }
+                    .background(Color.accent)
+                    .cornerRadius(50)
+                    .padding([.top,.bottom], 10)
+                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }
