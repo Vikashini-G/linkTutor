@@ -12,6 +12,7 @@ struct profileCard: View {
     var personEmail: String
     
     var body: some View {
+        
         HStack{
             Image("dummyProfilePic")
                 .resizable()
@@ -38,8 +39,11 @@ struct profileCard: View {
         }
         .padding()
         .frame(width: 350, height: 120)
-        .background(Color.accent)
+        .background(.thinMaterial)
         .cornerRadius(20)
+        //.background(Color.white.opacity(0.5))
+        
+        
     }
 }
 

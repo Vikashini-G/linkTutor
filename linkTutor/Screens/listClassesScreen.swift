@@ -73,6 +73,7 @@ struct listClassesScreen: View{
                 .padding([.top, .trailing, .leading])
                 
             }
+            //.background(gradientBackground())
             .background(Color.background)
         }
     }

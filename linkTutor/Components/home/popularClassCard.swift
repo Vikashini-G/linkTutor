@@ -32,7 +32,7 @@ struct popularClassCard: View{
                 .frame(width: 80, height: 80)
         }
         .padding([.horizontal, .vertical], 15)
-        .background(Color.accent)
+        .background(Color.white)
         .cornerRadius(20)
     }
 }

@@ -7,6 +7,7 @@ struct header: View{
             VStack(alignment: .leading){
                 HStack{
                     Text("Hi Emma!")
+                        .foregroundStyle(Color.white)
                         .font(AppFont.largeBold)
                         .padding(.bottom, 1)
                     Spacer()
@@ -16,10 +17,11 @@ struct header: View{
                             .resizable()
                             .clipped()
                             .frame(width: 50, height: 50)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white)
                     }
                 }
                 Text("what are you looking for today?")
+                    .foregroundStyle(Color.white)
                     .font(AppFont.mediumReg)
             }
             Spacer()

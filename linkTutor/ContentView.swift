@@ -53,6 +53,27 @@
 //  Created by user2 on 27/01/24.
 //
 
+//import SwiftUI
+//
+//struct ContentView: View {
+//    var body: some View {
+//        LinearGradient(
+//            gradient: Gradient(colors: [Color.blue, Color.pink]),
+//            startPoint: .topTrailing,
+//            endPoint: .bottomLeading
+//        )
+//        .edgesIgnoringSafeArea(.all)
+//    }
+//}
+//
+//@main
+//struct YourApp: App {
+//    var body: some Scene {
+//        WindowGroup {
+//            ContentView()
+//        }
+//    }
+//}
 import SwiftUI
 
 struct ContentView: View {

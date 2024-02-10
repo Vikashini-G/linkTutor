@@ -75,7 +75,7 @@ struct loginView: View {
                                 .cornerRadius(8)
                                 .padding(10)
                         }
-                        .listRowBackground(Color.background)
+                        .listRowBackground(Color.clear)
                         VStack(alignment: .leading){
                             Text("Password")
                                 .font(AppFont.actionButton)
@@ -88,7 +88,7 @@ struct loginView: View {
                                 .padding(10)
                         }
                         .padding(.top)
-                        .listRowBackground(Color.background)
+                        .listRowBackground(Color.clear)
                     }
                     .padding(.top, 20)
                     .offset(y: 150)
@@ -97,21 +97,20 @@ struct loginView: View {
                     //button
                     Button(action: {}) {
                         Text("Login")
-                            .font(AppFont.mediumSemiBold)
+                            .font(AppFont.mediumReg)
                             .foregroundColor(.black)
-                            .padding(10)
-                            .padding(.horizontal, 50)
-                            .padding(.vertical, 10)
                     }
+                    .frame(width: 250, height: 25)
+                    .padding()
                     .background(Color.accent)
                     .cornerRadius(50)
-                    .padding([.top,.bottom], 10)
-                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                    .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }
                 .padding()
             }
+            //.background(gradientBackground())
             .background(Color.background)
         }
     }

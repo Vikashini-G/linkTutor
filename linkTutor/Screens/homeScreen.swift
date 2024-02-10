@@ -2,57 +2,84 @@ import SwiftUI
 
 struct homeScreen: View{
     var body: some View{
+        
         NavigationStack{
-            ZStack{
-                //            VStack{
-                //                accentClassViewHeader()
-                //                Spacer()
-                //            }
-                //.offset(y: -120)
+            
+            VStack{
                 VStack{
-                    header(yourName: "Emma")
-                        .padding(.horizontal)
-                    
-                    //Enrolled classes section
-                    sectionHeader(sectionName: "Enrolled classes")
-                        .padding(.horizontal)
-                    
-                    //enrolled classes cards
-                    enrolledClassList()
-                    
-                    
-                    //Popular classes section
-                    sectionHeader(sectionName: "Popular classes in your city!")
-                        .padding(.horizontal)
-                    
-                    //popular classes cards
-                    ScrollView(.horizontal, showsIndicators: false){
-                        HStack(spacing: 10) {
-                            popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
-                            popularClassCard(className: "Swimming", tutorName: "John Doe", iconName: "swimming")
-                            popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
+                    ZStack(alignment: .top){
+                        Rectangle()
+                            .frame(width: .infinity, height: 60)
+                            .foregroundStyle(Color.accent)
+                        VStack{
+                            header(yourName: "Emma")
+                                .padding(.bottom)
+                            HStack{
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundStyle(Color.myGray)
+                                Text("Skills, tutors, centers...")
+                                    .foregroundStyle(Color.myGray)
+                                Spacer()
+                            }
+                            .padding(3)
+                            .frame(width: .infinity, height: 35)
+                            .background(Color.searchBarBg.opacity(0.6))
+                            .cornerRadius(8)
+                            
                         }
+                        .padding(.horizontal)
+                        .padding(.bottom, 20)
+                        .background(Color.accent)
+                        .cornerRadius(40)
                     }
-                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
-                    .padding(.leading)
+                }
+                    VStack{
+                        //Enrolled classes section
+                        sectionHeader(sectionName: "Enrolled classes")
+                            .padding(.horizontal)
+                        
+                        //enrolled classes cards
+                        enrolledClassList()
+                        
+                        
+                        //Explore skills section
+                        sectionHeader(sectionName: "Explore skills!")
+                            .padding(.horizontal)
+                        
+                        //popular classes cards
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(spacing: 10) {
+                                popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
+                                popularClassCard(className: "Swimming", tutorName: "John Doe", iconName: "swimming")
+                                popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
+                            }
+                        }
+                        .padding(.leading)
+                        
+                        Spacer()
+                    }
                     
                     Spacer()
                     
-                }
                 
             }
-            .padding(.top, 10)
-            .background(
-                VStack{
-                    accentClassViewHeader()
-                        .edgesIgnoringSafeArea(.top)
-                        .offset(y: -150)
-                    Spacer()
-                }
-            )
+//            .background(
+//                VStack{
+//                    accentClassViewHeader()
+//                        .ignoresSafeArea(.all, edges: .top)
+//                    Spacer()
+//                }
+//            )
             .background(Color.background)
         }
+        .overlay(alignment: .top) {
+            Color.accent // Or any view or color
+                .background(.regularMaterial) // I put clear here because I prefer to put a blur in this case. This modifier and the material it contains are optional.
+                .ignoresSafeArea(edges: .top)
+                .frame(height: 0) // This will constrain the overlay to only go above the top safe area and not under.
+        }
     }
+    
 }
 
 #Preview {

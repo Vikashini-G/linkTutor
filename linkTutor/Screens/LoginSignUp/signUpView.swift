@@ -42,7 +42,7 @@ struct signUpView: View {
                             NavigationLink(destination: loginView()){
                                 Text("Login")
                                     .font(AppFont.mediumSemiBold)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.black)
                             }
                             Rectangle()
                                 .frame(width: 100, height: 3)
@@ -68,66 +68,98 @@ struct signUpView: View {
                         VStack(alignment: .leading){
                             Text("Email address")
                                 .font(AppFont.actionButton)
-                                .fontDesign(.rounded)
                                 .fontWeight(.semibold)
-                                .padding(.leading, 10)
                                 .foregroundStyle(Color.myGray)
                             TextField("Email address", text: $emailAdd)
                                 .listRowBackground(Color.background)
                                 .textFieldStyle(.plain)
                                 .cornerRadius(8)
-                                .padding(10)
                         }
-                        .listRowBackground(Color.background)
+                        .listRowBackground(Color.clear)
                         VStack(alignment: .leading){
                             Text("Password")
                                 .font(AppFont.actionButton)
-                                .fontDesign(.rounded)
                                 .fontWeight(.semibold)
-                                .padding(.leading, 10)
                                 .foregroundStyle(Color.myGray)
                             SecureField("Password", text: $password)
                                 .cornerRadius(8)
-                                .padding(10)
                         }
                         .padding(.top)
-                        .listRowBackground(Color.background)
+                        .listRowBackground(Color.clear)
                         VStack(alignment: .leading){
                             Text("Phone number")
                                 .font(AppFont.actionButton)
-                                .fontDesign(.rounded)
                                 .fontWeight(.semibold)
-                                .padding(.leading, 10)
                                 .foregroundStyle(Color.myGray)
                             SecureField("Phone number", text: $phoneNumber)
                                 .cornerRadius(8)
-                                .padding(10)
                         }
                         .padding(.top)
-                        .listRowBackground(Color.background)
+                        .listRowBackground(Color.clear)
                     }
-                    .padding(.top, 20)
-                    .offset(y: 100)
+                    .padding(.top)
+                    .offset(y: 60)
                     .listStyle(PlainListStyle())
+                    
+                    //Teacher or stu
+                    VStack(alignment: .leading){
+                        Text("Register as a")
+                            .font(AppFont.smallSemiBold)
+                            .padding([.top,.leading])
+                        HStack{
+                            Spacer()
+                            NavigationLink(destination: homeScreen()) {
+                                VStack{
+                                    Image(systemName: "studentdesk")
+                                        .font(.system(size: 50))
+                                    Text("Student")
+                                        .font(AppFont.smallReg)
+                                }
+                            }
+                            .frame(width: 80, height: 80)
+                            .padding()
+                            .background(Color.white)
+                            .foregroundColor(.black)
+                            .cornerRadius(20)
+                            .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                            Spacer()
+                            NavigationLink(destination: homeScreen()) {
+                                VStack{
+                                    Image(systemName: "person.bust.fill")
+                                        .font(.system(size: 50))
+                                    Text("Tutor")
+                                        .font(AppFont.smallReg)
+                                }
+                            }
+                            .frame(width: 80, height: 80)
+                            .padding()
+                            .background(Color.white)
+                            .foregroundColor(.black)
+                            .cornerRadius(20)
+                            .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                            Spacer()
+                        }
+                    }
+                    .padding(.vertical)
+                    
                     
                     //button
                     Button(action: {}) {
                         Text("Sign up")
-                            .font(AppFont.mediumSemiBold)
+                            .font(AppFont.mediumReg)
                             .foregroundColor(.black)
-                            .padding(10)
-                            .padding(.horizontal, 50)
-                            .padding(.vertical, 10)
                     }
+                    .frame(width: 250, height: 25)
+                    .padding()
                     .background(Color.accent)
                     .cornerRadius(50)
-                    .padding([.top,.bottom], 10)
-                    .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                    .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }
                 .padding()
             }
+            //.background(gradientBackground())
             .background(Color.background)
         }
     }
