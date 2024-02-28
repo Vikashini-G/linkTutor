@@ -7,29 +7,29 @@ struct classPreviewCard: View{
         VStack(alignment: .leading){
             HStack{
                 //Image(systemName: "person.crop.square")
-                Image(classData.tutorImage)
-                                .resizable()
-                                .clipped()
-                                .frame(width: 85, height: 85)
-                                .cornerRadius(50)
-                                .padding(.trailing ,5)
+                Image(classData.studentsData.diffClassType.tutorImage)
+                    .resizable()
+                    .clipped()
+                    .frame(width: 85, height: 85)
+                    .cornerRadius(50)
+                    .padding(.trailing, 5)
                 VStack(alignment: .leading){
-                    Text("\(classData.className)")
+                    Text("\(classData.studentsData.className)")
                         .font(AppFont.mediumSemiBold)
                     
-                    Text("by \(classData.tutorName)")
+                    Text("by \(classData.studentsData.diffClassType.tutorName)")
                         .font(AppFont.smallReg)
                     
                     //4.5 stars and 40 reviews
                     HStack{
-                        Text("\(classData.tutorRating, specifier: "%.1f") ⭐️")
+                        Text("\(classData.studentsData.diffClassType.tutorRating, specifier: "%.1f") ⭐️")
                             .font(AppFont.smallReg)
                             .padding([.top, .bottom], 4)
                             .padding([.leading, .trailing], 8)
                             .background(.white)
                             .cornerRadius(50)
                             .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
-                        Text("\(classData.reviewCount) reviews")
+                        Text("\(classData.studentsData.diffClassType.reviewCount) reviews")
                             .font(AppFont.smallReg)
                             .padding(.leading, 5)
                             .foregroundColor(.gray)
@@ -45,7 +45,7 @@ struct classPreviewCard: View{
             HStack{
                 Image(systemName: "location")
                     .font(.system(size: 20))
-                Text("\(classData.tutorAddress)")
+                Text("\(classData.studentsData.diffClassType.tutorAddress)")
             }
             .padding([.top, .bottom], 1)
             
@@ -75,7 +75,7 @@ struct classPreviewCard: View{
                 
                 Image(systemName: "phone.fill")
                     .font(.system(size: 17))
-                Text("\(classData.tutorPhone)")
+                Text("\(classData.studentsData.diffClassType.tutorPhone)")
                     .font(AppFont.actionButton)
                 
               
@@ -84,7 +84,7 @@ struct classPreviewCard: View{
             }
             .padding([.top, .bottom], 4)
             .padding([.leading, .trailing], 12)
-            .background(Color.phoneAccent)
+            .background(Color.accent)
             .cornerRadius(50)
             
             //Spacer()

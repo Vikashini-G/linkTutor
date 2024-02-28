@@ -1,3 +1,54 @@
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        NavigationView {
+            TabView {
+                homeScreen()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                            .padding(.top)
+                    }
+                searchScreen()
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                MyTimetablePageSwiftUIView(allClasses: [
+                    TimetableClass(
+                        id: UUID(),
+                        className: "Math",
+                        tutorName: "John Doe",
+                        classStartTime: Date(),
+                        classEndTime: Date().addingTimeInterval(3600)
+                    ),
+                    TimetableClass(
+                        id: UUID(),
+                        className: "History",
+                        tutorName: "Jane Smith",
+                        classStartTime: Date().addingTimeInterval(86400),
+                        classEndTime: Date().addingTimeInterval(90000)
+                    ),
+                    // Add more sample classes as needed
+                ])
+                    .tabItem {
+                        Label("My Timetable", systemImage: "calendar")
+                    }
+            }
+        }
+        .preferredColorScheme(.dark)
+
+        .navigationBarHidden(true)
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+
 ////
 ////  ContentView.swift
 ////  linkTutor
@@ -74,49 +125,3 @@
 //        }
 //    }
 //}
-import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        NavigationView {
-            TabView {
-                homeScreen()
-                    .tabItem {
-                        Label("Home", systemImage: "house")
-                            .padding(.top)
-                    }
-                searchScreen()
-                    .tabItem {
-                        Label("Search", systemImage: "magnifyingglass")
-                    }
-                MyTimetablePageSwiftUIView(allClasses: [
-                    TimetableClass(
-                        id: UUID(),
-                        className: "Math",
-                        tutorName: "John Doe",
-                        classStartTime: Date(),
-                        classEndTime: Date().addingTimeInterval(3600)
-                    ),
-                    TimetableClass(
-                        id: UUID(),
-                        className: "History",
-                        tutorName: "Jane Smith",
-                        classStartTime: Date().addingTimeInterval(86400),
-                        classEndTime: Date().addingTimeInterval(90000)
-                    ),
-                    // Add more sample classes as needed
-                ])
-                    .tabItem {
-                        Label("My Timetable", systemImage: "calendar")
-                    }
-            }
-        }
-        .navigationBarHidden(true)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

@@ -1,16 +1,10 @@
 import SwiftUI
 
 struct homeScreen: View{
+    @StateObject var viewModel = listClassesScreenModel()
     var body: some View{
-        
-        NavigationStack{
-            
+        NavigationView{
             VStack{
-                VStack{
-                    ZStack(alignment: .top){
-                        Rectangle()
-                            .frame(width: .infinity, height: 60)
-                            .foregroundStyle(Color.accent)
                         VStack{
                             header(yourName: "Emma")
                                 .padding(.bottom)
@@ -18,70 +12,87 @@ struct homeScreen: View{
                                 Image(systemName: "magnifyingglass")
                                     .foregroundStyle(Color.myGray)
                                 Text("Skills, tutors, centers...")
-                                    .foregroundStyle(Color.myGray)
+                                    
                                 Spacer()
                             }
+                            .foregroundStyle(Color.myGray).opacity(0.6)
                             .padding(3)
+                            .padding(.leading, 10)
                             .frame(width: .infinity, height: 35)
-                            .background(Color.searchBarBg.opacity(0.6))
+                            .background(.ultraThinMaterial)
                             .cornerRadius(8)
                             
                         }
                         .padding(.horizontal)
                         .padding(.bottom, 20)
-                        .background(Color.accent)
-                        .cornerRadius(40)
-                    }
-                }
-                    VStack{
-                        //Enrolled classes section
-                        sectionHeader(sectionName: "Enrolled classes")
-                            .padding(.horizontal)
-                        
-                        //enrolled classes cards
-                        enrolledClassList()
-                        
-                        
-                        //Explore skills section
-                        sectionHeader(sectionName: "Explore skills!")
-                            .padding(.horizontal)
-                        
-                        //popular classes cards
-                        ScrollView(.horizontal, showsIndicators: false){
-                            HStack(spacing: 10) {
-                                popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
-                                popularClassCard(className: "Swimming", tutorName: "John Doe", iconName: "swimming")
-                                popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
+                        //.background(Color.accent)
+                       // .cornerRadius(40)
+                VStack{
+                    //Enrolled classes section
+                    SectionHeader(sectionName: "Enrolled Class!", fileLocation: enrolledClassVList(classdata: enrolledClassMockData.sampleClassData))
+                        .padding(.horizontal)
+                        .onTapGesture {
+                            viewModel.enrolledClassFramework = enrolledClassVList(classdata: enrolledClassMockData.sampleClassData)
+                        }
+                    
+                    //enrolled classes cards
+                    enrolledClassList(classdata: enrolledClassMockData.sampleClassData)
+                    
+                    
+                    //Explore skills section
+                    SectionHeader(sectionName: "Explore Skill!", fileLocation: allPopularCard())
+                        .padding(.horizontal)
+                        .onTapGesture {
+                            viewModel.popularClassFramework = allPopularCard()
+                        }
+                       
+                    
+                    //explore classes cards
+                    ScrollView(.horizontal, showsIndicators: false){
+                        HStack(spacing: 10) {
+                            ForEach(1..<4) { index in
+                                popularClassCard(classData: classesMockData.classdata[index] , iconName: "book")
+                                    .onTapGesture {
+                                        viewModel.selectedFramework = classesMockData.classdata[index]
+                                    }
+                                
                             }
                         }
-                        .padding(.leading)
+                        
                         
                         Spacer()
                     }
+                    //.shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                    .padding(.leading)
+                    .fullScreenCover(isPresented: $viewModel.isShowingDetailView) {
+                        listClassesScreen(classData : viewModel.selectedFramework ?? classesMockData.sampleClassData, isShowingDetailView: $viewModel.isShowingDetailView)
+                    }
+                    
                     
                     Spacer()
                     
-                
+                    
+                }
             }
-//            .background(
-//                VStack{
-//                    accentClassViewHeader()
-//                        .ignoresSafeArea(.all, edges: .top)
-//                    Spacer()
-//                }
-//            )
             .background(Color.background)
-        }
-        .overlay(alignment: .top) {
-            Color.accent // Or any view or color
-                .background(.regularMaterial) // I put clear here because I prefer to put a blur in this case. This modifier and the material it contains are optional.
-                .ignoresSafeArea(edges: .top)
-                .frame(height: 0) // This will constrain the overlay to only go above the top safe area and not under.
+            .environment(\.colorScheme, .dark)
+            
+            //the status bar
+//            .overlay(alignment: .top) {
+//                Color.accent
+//                    .background(.regularMaterial)
+//                    .ignoresSafeArea(edges: .top)
+//                    .frame(height: 0)
+//            }
         }
     }
-    
+        
 }
+    
+
 
 #Preview {
     homeScreen()
 }
+
+

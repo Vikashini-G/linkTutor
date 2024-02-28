@@ -4,8 +4,9 @@ struct listClassesScreen: View{
     @State private var showActionSheet = false
     @State private var selectedSortOption: SortOption = .lowToHigh
     @State private var selectedPrice: Double = 100.0 // Initial value for the slider
-    var skillType: String
-   // var classesData : classMockData
+    var classData : classMockData
+    
+    @Binding var isShowingDetailView : Bool
 
     enum SortOption: String, Identifiable {
         case lowToHigh = "Low to High"
@@ -16,14 +17,26 @@ struct listClassesScreen: View{
     var body: some View{
         NavigationView {
             ZStack{
-                VStack{
-                    accentHeader()
-                    Spacer()
-                }
-                .ignoresSafeArea()
+//                VStack{
+//                    
+//                    accentHeader()
+//                    Spacer()
+//                }
+//                .ignoresSafeArea()
                 VStack(alignment: .leading){
                     HStack{
-                        Text("\(skillType)")
+                        
+                        Button {
+                            isShowingDetailView = false
+                        } label : {
+                            Image(systemName: "arrow.backward")
+                                .foregroundColor(Color(.label))
+                                .imageScale(.large)
+                                .frame(width : 44 , height : 44) // we increase the touch target if user click on the side of x then also it will responds
+                        }
+                        
+                        
+                        Text("\(classData.skillType)")
                             .font(AppFont.largeBold)
                         Spacer()
                         Button(action: {
@@ -33,7 +46,7 @@ struct listClassesScreen: View{
                                 .resizable()
                                 .clipped()
                                 .frame(width: 25, height: 15)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.blue)
                         }
                         .actionSheet(isPresented: $showActionSheet) {
                             ActionSheet(
@@ -53,35 +66,39 @@ struct listClassesScreen: View{
                     .padding(.bottom, 15)
                     
                     Text("Relavent results")
-                        .font(AppFont.smallReg)
+                        .font(AppFont.mediumReg)
                         .padding(.leading, 10)
-                        .foregroundColor(Color.myGray)
+                        .foregroundColor(.gray)
                     
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 10){
                             //Taking value from classesMockData
-                            ForEach(classesMockData.classData) { classesData in
+//                            ForEach(classesMockData.classdata) { classesData in
+//                                classPreviewCard(classData: classesData)
+//                            }
+//
+                           
+                            ForEach(classesMockData.classdata.filter { $0.skillType == "\(classData.skillType)" }) { classesData in
                                 classPreviewCard(classData: classesData)
                             }
-
+                            
                         }
-                    }.shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
+                    }
+                    //.shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }
                 .ignoresSafeArea()
                 .padding([.top, .trailing, .leading])
+                .background(Color.background)
                 
             }
-            //.background(gradientBackground())
-            .background(Color.background)
+            .background(Color.white)
         }
     }
 }
 
 
 #Preview {
-    listClassesScreen(skillType: "Piano classes")
+    listClassesScreen(classData: classesMockData.sampleClassData, isShowingDetailView: .constant(false) )
 }
-
-

@@ -1,9 +1,8 @@
 import SwiftUI
 
 struct popularClassCard: View{
-    var className: String
-    var tutorName: String
-    var iconName: String
+    var classData : classMockData
+        var iconName: String
 //    @State private var colorIndex: Int = 0
 //    func getRandomColor() -> Color {
 //        let colors: [Color] = [Color("#FFB703"), Color("#14CC92"), Color("#F4AAD5"), Color("#FFA138"), Color("#0ABAFF")]
@@ -16,27 +15,33 @@ struct popularClassCard: View{
 //        return colors[colorIndex]
 //    }
     var body: some View{
-        VStack {
-        //class
-            Text("\(className)")
+        VStack{
+            //class
+            Text("\(classData.skillType)")
+                .foregroundStyle(Color.black)
                 .font(AppFont.mediumSemiBold)
-            
-        //tutor
-            Text("by \(tutorName)")
+                .scaledToFit()
+                //.minimumScaleFactor(0.6)
+                    
+            //tutor
+            Text("by \(classData.studentsData.diffClassType.tutorName)")
+                .foregroundStyle(Color.black)
                 .font(AppFont.smallReg)
+                .scaledToFit()
+                //.minimumScaleFactor(0.6)
                 
-        //icon
+            //icon
             Image("\(iconName)")
                 .resizable()
-                .clipped()
                 .frame(width: 80, height: 80)
+            
         }
-        .padding([.horizontal, .vertical], 15)
-        .background(Color.white)
+        .frame(width: min(130, 160), height: 160)
+        .background(Color.accent)
         .cornerRadius(20)
     }
 }
 
 #Preview {
-    popularClassCard(className: "Spoken English", tutorName: "John Doe", iconName: "book")
+    popularClassCard(classData: classesMockData.sampleClassData, iconName: "book")
 }

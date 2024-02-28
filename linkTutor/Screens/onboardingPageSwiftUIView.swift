@@ -51,6 +51,7 @@ struct tabBarView: View {
                     Spacer()
                     if currentPage != 2 {
                         HStack(alignment: .bottom) {
+                            Spacer()
                             NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
                                 Text("Skip")
                                     .padding()
@@ -58,18 +59,7 @@ struct tabBarView: View {
                                     .foregroundColor(.black)
                                     .cornerRadius(30)
                             }
-                            Spacer()
-                            Button(action: {
-                                withAnimation {
-                                    currentPage = min(currentPage + 1, 2)
-                                }
-                            }) {
-                                Image(systemName: "arrow.forward.circle.fill")
-                                    .resizable()
-                                    .clipped()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(.littleDarkAccent)
-                            }
+    
                         }
                         .padding()
                     } else {
@@ -180,7 +170,6 @@ struct FeatureRow: View {
             
                 Text(title)
                     .font(.title)
-                    .foregroundColor(.black)
                     
                 Text(description)
                     .font(AppFont.mediumSemiBold)

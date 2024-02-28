@@ -10,13 +10,13 @@ struct enrolledClassCard: View{
                     Text(classCard.tutorName)
                         .font(AppFont.smallReg)
                     Text("Days")
-                        .font(AppFont.smallReg)
+                        .font(AppFont.smallSemiBold)
                         .foregroundColor(.gray)
                         .padding(.top, 1)
                     Text(classCard.daysConducted)
                         .font(AppFont.smallReg)
                     Text("Timing")
-                        .font(AppFont.smallReg)
+                        .font(AppFont.smallSemiBold)
                         .foregroundColor(.gray)
                         .padding(.top, 1)
                     Text(classCard.timing)
@@ -24,14 +24,15 @@ struct enrolledClassCard: View{
                 }
             Spacer()
         }
-        .frame(width: 180, height: 150)
+        .frame(width: min(150,180), height: 150)
         .padding(.horizontal, 20)
         .padding(.vertical, 20)
-        .background(.white)
+        .background(Color.elavated)
         .cornerRadius(10)
+        .environment(\.colorScheme, .dark) //DARK
     }
 }
 
 #Preview {
-    enrolledClassCard(classCard: enrolledClassDataM(className: "Piano Class", tutorName: "Mr. Joe", daysConducted: "Mondays & Tuesdays", timing: "4-5pm"))
+    enrolledClassCard(classCard: enrolledClassMockData.sampleClassData)
 }
