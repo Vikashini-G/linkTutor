@@ -52,7 +52,6 @@
 		B1A9E3C52B6CA32300324817 /* gradient header.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C42B6CA32300324817 /* gradient header.swift */; };
 		B1A9E3C92B6CB3FD00324817 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3C82B6CB3FD00324817 /* Notifications.swift */; };
 		B1A9E3CB2B6CB5AA00324817 /* timetablesample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */; };
-		B1A9E3CD2B6DEA4D00324817 /* gradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A9E3CC2B6DEA4D00324817 /* gradientBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +120,6 @@
 		B1A9E3C42B6CA32300324817 /* gradient header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "gradient header.swift"; sourceTree = "<group>"; };
 		B1A9E3C82B6CB3FD00324817 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B1A9E3CA2B6CB5AA00324817 /* timetablesample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timetablesample.swift; sourceTree = "<group>"; };
-		B1A9E3CC2B6DEA4D00324817 /* gradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gradientBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +241,7 @@
 		0F5E942C2B654B4500212922 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B1A9E3B32B6AA87600324817 /* myProfileView.swift */,
 				B1A9E3BC2B6BEFE900324817 /* LoginSignUp */,
 				B1A9E3B82B6BD59100324817 /* onboardingPageSwiftUIView.swift */,
 				0F5E942D2B654B6A00212922 /* homeScreen.swift */,
@@ -250,8 +249,6 @@
 				0F5E943C2B6667FB00212922 /* searchScreen.swift */,
 				0FAA9BE32B68B32900C0A82D /* classLandingPage.swift */,
 				0FDA44782B68D58D006F1418 /* MyTimetablePageSwiftUIView.swift */,
-				B1A9E3B32B6AA87600324817 /* myProfileView.swift */,
-				B1A9E3CC2B6DEA4D00324817 /* gradientBackground.swift */,
 				0FDA447D2B68D651006F1418 /* signUpSwiftUIView.swift */,
 				0FAA9BF12B68D32700C0A82D /* ProfileInputView.swift */,
 				0FAA9BF32B68D34B00C0A82D /* RatingFormView.swift */,
@@ -487,7 +484,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A9E3B92B6BD59100324817 /* onboardingPageSwiftUIView.swift in Sources */,
-				B1A9E3CD2B6DEA4D00324817 /* gradientBackground.swift in Sources */,
 				0F28B1012B68089200E7E47F /* listClassesScreen.swift in Sources */,
 				0F5E94302B654C2E00212922 /* header.swift in Sources */,
 				0F28B1042B680D3300E7E47F /* classPreviewCard.swift in Sources */,

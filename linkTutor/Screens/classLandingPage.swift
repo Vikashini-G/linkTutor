@@ -206,7 +206,7 @@ struct classLandingPage: View{
                     Spacer()
                 }
             )
-            //.background(gradientBackground())
+            
             .background(Color.background)
             VStack{
                 HStack{

@@ -12,13 +12,6 @@ struct loginView: View {
     @State private var password = ""
     var body: some View {
         NavigationView{
-            ZStack{
-                VStack{
-                    accentLongheader()
-                        .edgesIgnoringSafeArea(.top)
-                        .offset(y: -150)
-                    Spacer()
-                }
                 VStack{
                     //Linktutor
                     VStack(alignment: .leading){
@@ -26,11 +19,10 @@ struct loginView: View {
                             .fontWeight(.bold)
                             .font(.system(size: 70).weight(.bold))
                             .fontDesign(.rounded)
-                            .foregroundColor(.maroonRed)
                         Text("To find your next tutor")
                             .fontWeight(.bold)
-                            .font(AppFont.smallReg)
-                            .foregroundColor(.maroonRed)
+                            .font(AppFont.mediumReg)
+                            .foregroundColor(.accent)
                             .padding(.bottom,25)
                     }
                     .offset(y: 60)
@@ -40,17 +32,16 @@ struct loginView: View {
                         VStack{
                             Text("Login")
                                 .font(AppFont.mediumSemiBold)
-                                .foregroundStyle(.black)
                             Rectangle()
                                 .frame(width: 100, height: 3)
-                                .foregroundStyle(Color.blue)
+                                .foregroundStyle(Color.accent)
                         }
                         Spacer()
                         VStack{
                             NavigationLink(destination: signUpView()){
                                 Text("Sign up")
                                     .font(AppFont.mediumSemiBold)
-                                    .foregroundStyle(.black)
+                                    .foregroundColor(.text)
                             }
                             Rectangle()
                                 .frame(width: 100, height: 3)
@@ -64,11 +55,8 @@ struct loginView: View {
                     List{
                         VStack(alignment: .leading){
                             Text("Email address")
-                                .font(AppFont.actionButton)
-                                .fontDesign(.rounded)
-                                .fontWeight(.semibold)
+                                .font(AppFont.mediumReg)
                                 .padding(.leading, 10)
-                                .foregroundStyle(Color.myGray)
                             TextField("Email addresss", text: $emailAdd)
                                 .listRowBackground(Color.background)
                                 .textFieldStyle(.plain)
@@ -78,11 +66,8 @@ struct loginView: View {
                         .listRowBackground(Color.clear)
                         VStack(alignment: .leading){
                             Text("Password")
-                                .font(AppFont.actionButton)
-                                .fontDesign(.rounded)
-                                .fontWeight(.semibold)
+                                .font(AppFont.mediumReg)
                                 .padding(.leading, 10)
-                                .foregroundStyle(Color.myGray)
                             SecureField("Password", text: $password)
                                 .cornerRadius(8)
                                 .padding(10)
@@ -97,22 +82,21 @@ struct loginView: View {
                     //button
                     Button(action: {}) {
                         Text("Login")
-                            .font(AppFont.mediumReg)
+                            .font(AppFont.mediumSemiBold)
                             .foregroundColor(.black)
                     }
-                    .frame(width: 250, height: 25)
+                    .frame(width: 250, height: 35)
                     .padding()
                     .background(Color.accent)
                     .cornerRadius(50)
-                    .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
                     
                     Spacer()
                 }
                 .padding()
-            }
-            //.background(gradientBackground())
-            .background(Color.background)
+                .background(Color.background)
+                .environment(\.colorScheme, .dark)
         }
+        .navigationBarBackButtonHidden()
     }
 }
 

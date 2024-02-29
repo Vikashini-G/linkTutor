@@ -30,7 +30,7 @@ struct MyTimetablePageSwiftUIView: View {
                             isShowingFilterViewPopup.toggle()
                         }) {
                             Image(systemName: "calendar")
-                                .foregroundColor(.black)
+                                .foregroundColor(.accent)
                                 .font(.system(size: 30))
                                 .clipped()
                         }
@@ -73,13 +73,13 @@ struct MyTimetablePageSwiftUIView: View {
                         }
                         
                         if filteredClasses.isEmpty {
-                            Text("No classes Found!")
-                                .font(.title)
-                                .fontWeight(.bold)
-                                .foregroundColor(.black)
-                                .padding([.horizontal, .vertical], 15)
-                                .background(Color.white)
-                                .cornerRadius(20)
+                            HStack{
+                                Spacer()
+                                Text("No classes")
+                                    .font(AppFont.smallReg)
+                                    .foregroundStyle(Color.gray)
+                                Spacer()
+                            }
                         } else {
                             ForEach(filteredClasses, id: \.self) { timetableClass in
                                 TimeTableCardSwiftUIView(
@@ -141,7 +141,7 @@ struct MyTimetablePageSwiftUIView: View {
     
     private func formattedDate(date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd - MM - yyyy"
+        formatter.dateFormat = "dd-MM-yyyy"
         return formatter.string(from: date)
     }
     

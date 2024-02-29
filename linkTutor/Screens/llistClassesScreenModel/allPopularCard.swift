@@ -16,22 +16,29 @@ struct allPopularCard: View {
     
     var body: some View {
         NavigationView(){
-        //Form{
-            ScrollView(){
-                LazyVGrid(columns: columns, spacing: 10){
-                    ForEach(1..<6) {index in
-                        popularClassCard(classData: classesMockData.classdata[index] , iconName: "book")
-                            .onTapGesture {
-                                viewModel.selectedFramework = classesMockData.classdata[index]
-                            }
-
+            VStack{
+                HStack{
+                    Text("Explore skills!")
+                        .font(AppFont.largeBold)
+                    Spacer()
+                }
+                ScrollView(){
+                    LazyVGrid(columns: columns, spacing: 10){
+                        ForEach(1..<6) {index in
+                            popularClassCardV(classData: classesMockData.classdata[index] , iconName: "book")
+                                .onTapGesture {
+                                    viewModel.selectedFramework = classesMockData.classdata[index]
+                                }
+                            
+                        }
+                        
                     }
-                    
                 }
             }
-            .navigationTitle("Popular Skill")
-            //.shadow(color: .black.opacity(0.3), radius: 10, x: 0, y: 12)
             .padding()
+            .edgesIgnoringSafeArea(.bottom)
+            .background(Color.background)
+            .environment(\.colorScheme, .dark)
             .fullScreenCover(isPresented: $viewModel.isShowingDetailView) {
                 listClassesScreen(classData : viewModel.selectedFramework ?? classesMockData.sampleClassData, isShowingDetailView: $viewModel.isShowingDetailView)
                 
@@ -39,10 +46,38 @@ struct allPopularCard: View {
         }
     }
 }
-        
- 
-
 
 #Preview {
     allPopularCard()
+}
+
+struct popularClassCardV: View{
+    var classData : classMockData
+    var iconName: String
+    var body: some View{
+        VStack{
+            
+            //class
+            Text("\(classData.skillType)")
+                .font(AppFont.mediumSemiBold)
+                .scaledToFit()
+                //.minimumScaleFactor(0.6)
+                    
+//            //tutor
+//            Text("by \(classData.studentsData.diffClassType.tutorName)")
+//                .font(AppFont.smallReg)
+//                .scaledToFit()
+//                //.minimumScaleFactor(0.6)
+                
+            //icon
+            Image("\(iconName)")
+                .resizable()
+                .frame(width: 80, height: 80)
+            
+        }
+        .frame(width: 170, height: 140)
+        .foregroundColor(.black)
+        .background(Color.accent)
+        .cornerRadius(20)
+    }
 }

@@ -10,21 +10,33 @@ struct ProfileInputView: View {
     @State private var showImagePicker: Bool = false
     
     var body: some View {
-        NavigationView{
-            ZStack {
-                Color(.background)
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack(spacing: 20) {
-                    Spacer()
-                    
-                    Text("Edit Profile Information")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                    
-                    VStack(spacing: 20) {
+        
+                VStack {
+                    VStack{
+                        HStack{
+                            Text("Edit Profile ")
+                                .font(AppFont.largeBold)
+                            Spacer()
+                        }
                         // Profile Photo
-                        VStack(spacing: 10) {
+//                            if let image = image {
+//                                image
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 100, height: 100)
+//                                    .cornerRadius(50.0)
+//                            } else {
+//                                Image(systemName: "person.circle.fill")
+//                                    .resizable()
+//                                    .foregroundColor(.gray)
+//                                    .frame(width: 90, height: 90)
+//                                    .cornerRadius(50.0)
+//
+//                            }
+                            
+                        Button(action: {
+                                showImagePicker = true
+                        }) {
                             if let image = image {
                                 image
                                     .resizable()
@@ -34,70 +46,61 @@ struct ProfileInputView: View {
                             } else {
                                 Image(systemName: "person.circle.fill")
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
+                                    .foregroundColor(.gray)
+                                    .frame(width: 90, height: 90)
                                     .cornerRadius(50.0)
-                                
-                            }
                             
-                            Button(action: {
-                                showImagePicker = true
-                            }) {
-                                Text("Change profile photo")
-                                    .foregroundColor(.blue)
                             }
-                            .sheet(isPresented: $showImagePicker) {
-                                ImagePicker(image: $image)
-                            }
+                            //Text("Change profile photo").foregroundColor(.blue)
                         }
-                        
-                        // Name TextField
-                        TextField("Name", text: $name)
-                            .padding()
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(8)
-                        
-                        // Email TextField
-                        TextField("Email Address", text: $email)
-                            .padding()
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(8)
-                        
-                        // Password SecureField
-                        SecureField("Password", text: $password)
-                            .padding()
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(8)
-                        
-                        // Phone Number TextField
-                        TextField("Phone Number", text: $phoneNumber)
-                            .padding()
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(8)
-                        
-                        // About TextField
-                        TextField("About", text: $about)
-                            .padding()
-                            .background(Color(UIColor.systemGray5))
-                            .cornerRadius(8)
+                        .sheet(isPresented: $showImagePicker) {
+                            ImagePicker(image: $image)
+                        }
                     }
+                    .padding()
+                    
+                    List{
+                        Section(header: Text("")){
+                            // Name TextField
+                            TextField("Name", text: $name)
+                            .listRowBackground(Color.elavated)
+                            
+                            // About TextField
+                            TextField("About", text: $about)
+                            .listRowBackground(Color.elavated)
+                        }
+                        Section(header: Text("")){
+                            // Email TextField
+                            TextField("Email Address", text: $email)
+                            .listRowBackground(Color.elavated)
+                        
+                            // Phone Number TextField
+                            TextField("Phone Number", text: $phoneNumber)
+                            .listRowBackground(Color.elavated)
+                        }
+                        Section(header: Text("")){
+                            // Password SecureField
+                            SecureField("Password", text: $password)
+                            .listRowBackground(Color.elavated)
+                        }
+                    }
+                    .listStyle(.plain)
+                    .background(.clear)
                     
                     // Submit Button
                     Button(action: submitProfileData) {
                         Text("Submit")
+                            .font(AppFont.mediumSemiBold)
+                            .foregroundStyle(Color.black)
+                            .frame(width: 200, height: 35)
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 12)
+                            .background(Color.accent)
+                            .cornerRadius(50)
                     }
                     
-                    Spacer()
-                }
-                .padding()
-            }
-        }
+                } //v end
+                .background(Color.background)
+        
     }
         
         func submitProfileData() {
@@ -112,11 +115,14 @@ struct ProfileInputView: View {
     }
 
 
-struct ProfileInputView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileInputView()
+#Preview {
+    ProfileInputView()
     }
-}
+//struct ProfileInputView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProfileInputView()
+//    }
+//}
 
 
 

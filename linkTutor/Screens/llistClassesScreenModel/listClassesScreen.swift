@@ -46,7 +46,7 @@ struct listClassesScreen: View{
                                 .resizable()
                                 .clipped()
                                 .frame(width: 25, height: 15)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.accent)
                         }
                         .actionSheet(isPresented: $showActionSheet) {
                             ActionSheet(

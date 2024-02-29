@@ -97,7 +97,7 @@ struct TimeTableCardSwiftUIView: View {
             Spacer().frame(height: 10)
 
             Text("Timing")
-                .font(AppFont.smallReg)
+                .font(AppFont.smallSemiBold)
                 .foregroundColor(.gray)
 
             HStack {
@@ -106,7 +106,7 @@ struct TimeTableCardSwiftUIView: View {
             }
         }
         .padding([.horizontal, .vertical], 15)
-        .background(Color.white)
+        .background(Color.elavated)
         .cornerRadius(10)
     }
 
@@ -166,11 +166,10 @@ struct ReminderPopupView: View {
             }
             .padding()
             .foregroundColor(.blue)
-            .background(.white)
             .cornerRadius(8)
         }
         .padding()
-        .background(Color.white)
+        .background(Color.elavated)
         .cornerRadius(20)
 
     }

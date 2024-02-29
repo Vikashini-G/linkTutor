@@ -5,6 +5,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView {
+                
                 homeScreen()
                     .tabItem {
                         Label("Home", systemImage: "house")
@@ -35,10 +36,10 @@ struct ContentView: View {
                         Label("My Timetable", systemImage: "calendar")
                     }
             }
+            .accentColor(Color.accent)
         }
+        //.navigationBarHidden(false)
         .preferredColorScheme(.dark)
-
-        .navigationBarHidden(true)
     }
 }
 
@@ -103,25 +104,3 @@ struct ContentView_Previews: PreviewProvider {
 //
 //  Created by user2 on 27/01/24.
 //
-
-//import SwiftUI
-//
-//struct ContentView: View {
-//    var body: some View {
-//        LinearGradient(
-//            gradient: Gradient(colors: [Color.blue, Color.pink]),
-//            startPoint: .topTrailing,
-//            endPoint: .bottomLeading
-//        )
-//        .edgesIgnoringSafeArea(.all)
-//    }
-//}
-//
-//@main
-//struct YourApp: App {
-//    var body: some Scene {
-//        WindowGroup {
-//            ContentView()
-//        }
-//    }
-//}

@@ -18,7 +18,7 @@ struct homeScreen: View{
                             .foregroundStyle(Color.myGray).opacity(0.6)
                             .padding(3)
                             .padding(.leading, 10)
-                            .frame(width: .infinity, height: 35)
+                            .frame(width: 370, height: 35)
                             .background(.ultraThinMaterial)
                             .cornerRadius(8)
                             
@@ -29,7 +29,7 @@ struct homeScreen: View{
                        // .cornerRadius(40)
                 VStack{
                     //Enrolled classes section
-                    SectionHeader(sectionName: "Enrolled Class!", fileLocation: enrolledClassVList(classdata: enrolledClassMockData.sampleClassData))
+                    SectionHeader(sectionName: "Enrolled Classes", fileLocation: enrolledClassVList(classdata: enrolledClassMockData.sampleClassData))
                         .padding(.horizontal)
                         .onTapGesture {
                             viewModel.enrolledClassFramework = enrolledClassVList(classdata: enrolledClassMockData.sampleClassData)
@@ -40,7 +40,7 @@ struct homeScreen: View{
                     
                     
                     //Explore skills section
-                    SectionHeader(sectionName: "Explore Skill!", fileLocation: allPopularCard())
+                    SectionHeader(sectionName: "Explore Skills!", fileLocation: allPopularCard())
                         .padding(.horizontal)
                         .onTapGesture {
                             viewModel.popularClassFramework = allPopularCard()
@@ -76,14 +76,6 @@ struct homeScreen: View{
             }
             .background(Color.background)
             .environment(\.colorScheme, .dark)
-            
-            //the status bar
-//            .overlay(alignment: .top) {
-//                Color.accent
-//                    .background(.regularMaterial)
-//                    .ignoresSafeArea(edges: .top)
-//                    .frame(height: 0)
-//            }
         }
     }
         

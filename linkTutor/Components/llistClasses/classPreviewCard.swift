@@ -43,11 +43,22 @@ struct classPreviewCard: View{
             
             //tutor address
             HStack{
-                Image(systemName: "location")
-                    .font(.system(size: 20))
+                Image("location")
+                    .resizable()
+                    .frame(width: 20, height: 20)
                 Text("\(classData.studentsData.diffClassType.tutorAddress)")
             }
-            .padding([.top, .bottom], 1)
+            
+            HStack{
+                Image(systemName: "phone.fill")
+                    .font(.system(size: 20))
+                Text("\(classData.studentsData.diffClassType.tutorPhone)")
+                    .font(AppFont.actionButton)
+            }
+            .padding([.top, .bottom], 4)
+            .padding([.leading, .trailing], 12)
+            .background(Color.phoneAccent)
+            .cornerRadius(50)
             
             //phone and message option
 //            HStack{
@@ -71,21 +82,7 @@ struct classPreviewCard: View{
 //                .background(Color.messageAccent)
 //            }
             
-            HStack{
-                
-                Image(systemName: "phone.fill")
-                    .font(.system(size: 17))
-                Text("\(classData.studentsData.diffClassType.tutorPhone)")
-                    .font(AppFont.actionButton)
-                
-              
-                
             
-            }
-            .padding([.top, .bottom], 4)
-            .padding([.leading, .trailing], 12)
-            .background(Color.accent)
-            .cornerRadius(50)
             
             //Spacer()
             
@@ -94,7 +91,8 @@ struct classPreviewCard: View{
         }
         .frame(maxWidth: .infinity, maxHeight: 170)
         .padding()
-        .background(.white)
+        .foregroundStyle(Color.black)
+        .background(.accent)
         .cornerRadius(20)
     }
 }

@@ -92,11 +92,11 @@ struct onboardingPage1SwiftUIView: View {
                 }
                 HStack(alignment: .center) {
                     Image(systemName: "circle.fill")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                 }
                 .padding()
             }
@@ -116,11 +116,11 @@ struct onboardingPage2SwiftUIView: View {
                 }
                 HStack {
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle.fill")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                 }
                 .padding()
             }
@@ -140,11 +140,11 @@ struct onboardingPage3SwiftUIView: View {
                 }
                 HStack {
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle")
-                        .foregroundColor(.littleDarkAccent)
+                        
                     Image(systemName: "circle.fill")
-                        .foregroundColor(.littleDarkAccent)
+                        
                 }
                 .padding()
             }
@@ -166,7 +166,7 @@ struct FeatureRow: View {
                 .resizable()
                 .clipped()
                 .frame(width: 350, height: 350, alignment: .center)
-                .foregroundColor(.littleDarkAccent)
+                
             
                 Text(title)
                     .font(.title)

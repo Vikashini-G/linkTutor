@@ -11,7 +11,7 @@ struct header: View{
                         .padding(.bottom, 1)
                     Spacer()
                     //myProfileView
-                    NavigationLink(destination: myProfileView()){
+                    NavigationLink(destination: myProfileView(personName: "Fakie Nameiae", personEmail: "fake_email@gmail.com")){
                         Image(systemName: "person.circle.fill")
                             .resizable()
                             .clipped()

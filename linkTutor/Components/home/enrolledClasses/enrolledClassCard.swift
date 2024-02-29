@@ -3,7 +3,8 @@ import SwiftUI
 struct enrolledClassCard: View{
     var classCard: enrolledClassDataM
     var body: some View{
-        HStack{
+        VStack{
+            HStack{
                 VStack(alignment: .leading){
                     Text(classCard.className)
                         .font(AppFont.mediumSemiBold)
@@ -22,6 +23,8 @@ struct enrolledClassCard: View{
                     Text(classCard.timing)
                         .font(AppFont.smallReg)
                 }
+                Spacer()
+            }
             Spacer()
         }
         .frame(width: min(150,180), height: 150)
