@@ -38,6 +38,7 @@ struct classLandingPage: View{
                             .font(AppFont.smallReg)
                             .padding([.top, .bottom], 4)
                             .padding([.leading, .trailing], 8)
+                            .foregroundStyle(Color.black)
                             .background(.white)
                             .cornerRadius(50)
                             .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
@@ -59,7 +60,7 @@ struct classLandingPage: View{
                                 .padding(10)
                                 .padding([.leading, .trailing], 20)
                         }
-                        .background(Color.enrollButton)
+                        .background(Color.accent)
                         .cornerRadius(20)
                         .padding([.top,.bottom], 10)
                         
@@ -70,7 +71,7 @@ struct classLandingPage: View{
                     //quickInfoBox
                     quickInfoCard(tutorAddress: "Fake street name, New York", tutionDays: "Mon-Wed", tutionTiming: "4-5 pm", tutionFee: 2000)
                         .padding([.top,.bottom], 10)
-                        .shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
+                        
                     
                     //phone and iMessage option
                     HStack{
@@ -80,21 +81,22 @@ struct classLandingPage: View{
                             Text("\(tutorPhone)")
                                 .font(AppFont.actionButton)
                         }
-                        .padding([.top, .bottom], 4)
+                        .padding([.top, .bottom], 6)
                         .padding([.leading, .trailing], 12)
                         .background(Color.phoneAccent)
+                        .foregroundStyle(Color.black)
                         .cornerRadius(50)
                         
-                        HStack{
-                            Image(systemName: "message.fill")
-                                .font(.system(size: 17))
-                            Text("iMessage")
-                                .font(AppFont.actionButton)
-                        }
-                        .padding([.top, .bottom], 4)
-                        .padding([.leading, .trailing], 12)
-                        .background(Color.messageAccent)
-                        .cornerRadius(50)
+//                        HStack{
+//                            Image(systemName: "message.fill")
+//                                .font(.system(size: 17))
+//                            Text("iMessage")
+//                                .font(AppFont.actionButton)
+//                        }
+//                        .padding([.top, .bottom], 4)
+//                        .padding([.leading, .trailing], 12)
+//                        .background(Color.messageAccent)
+//                        .cornerRadius(50)
                         Spacer()
                     }
                     .padding([.top,.bottom], 10)
@@ -198,14 +200,6 @@ struct classLandingPage: View{
                 }
                 }
             .padding([.top, .leading, .trailing])
-            .background(
-                VStack{
-                    accentClassViewHeader()
-                        .edgesIgnoringSafeArea(.top)
-                        .offset(y: -150)
-                    Spacer()
-                }
-            )
             
             .background(Color.background)
             VStack{

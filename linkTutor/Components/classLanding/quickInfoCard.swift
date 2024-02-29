@@ -11,11 +11,12 @@ struct quickInfoCard: View{
             VStack(alignment: .leading){
                 Text("Address")
                     .font(AppFont.smallSemiBold)
-                    .foregroundColor(.gray)
+//                    .foregroundColor(.gray)
                 HStack{
-                    Image(systemName: "location")
-                        .font(.system(size: 20))
-                        .foregroundColor(.orange)
+                    Image("locationLight")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.white)
                     Text("\(tutorAddress)")
                     Spacer()
                 }
@@ -26,7 +27,7 @@ struct quickInfoCard: View{
             VStack(alignment: .leading){
                 Text("Timing")
                     .font(AppFont.smallSemiBold)
-                    .foregroundColor(.gray)
+//                    .foregroundColor(.gray)
                 HStack{
                     Text("\(tutionDays)")
                         .padding(.trailing, 10)
@@ -40,7 +41,7 @@ struct quickInfoCard: View{
             VStack(alignment: .leading){
                 Text("Fee")
                     .font(AppFont.smallSemiBold)
-                    .foregroundColor(.gray)
+//                    .foregroundColor(.gray)
                 HStack{
                     Text("₹\(tutionFee) /month")
                     Spacer()
@@ -49,7 +50,7 @@ struct quickInfoCard: View{
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: 180 )
-        .background(.white)
+        .background(.elavated)
         .cornerRadius(10)
         //.shadow(color: .black.opacity(0.05), radius: 10, x: 0, y: 12)
     }

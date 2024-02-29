@@ -38,6 +38,8 @@ struct ContentView: View {
             }
             .accentColor(Color.accent)
         }
+        .tint(Color.accent)
+        .accentColor(Color.accent)
         //.navigationBarHidden(false)
         .preferredColorScheme(.dark)
     }
